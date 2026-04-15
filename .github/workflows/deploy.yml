@@ -5,6 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# 设置pages权限
 permissions:
   contents: read
   pages: write
