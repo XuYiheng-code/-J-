@@ -4,62 +4,64 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const albums = [
   {
     id: 1,
     name: '乐行者',
     year: '2003',
     description: '首张专辑，开启音乐之旅',
-    image: '/assets/albums/album-1.jpg',
+    image: `${basePath}/assets/albums/album-1.jpg`,
   },
   {
     id: 2,
     name: '第二天堂',
     year: '2005',
     description: '经典之作，江南传唱大街小巷',
-    image: '/assets/albums/album-2.jpg',
+    image: `${basePath}/assets/albums/album-2.jpg`,
   },
   {
     id: 3,
     name: '编号89757',
     year: '2005',
     description: '科幻概念，突破性音乐风格',
-    image: '/assets/albums/album-3.jpg',
+    image: `${basePath}/assets/albums/album-3.jpg`,
   },
   {
     id: 4,
     name: 'JJ陆',
     year: '2008',
     description: '小酒窝等金曲诞生',
-    image: '/assets/albums/album-4.jpg',
+    image: `${basePath}/assets/albums/album-4.jpg`,
   },
   {
     id: 5,
     name: '她说',
     year: '2010',
     description: '同名主打，触动无数人心',
-    image: '/assets/albums/album-5.jpg',
+    image: `${basePath}/assets/albums/album-5.jpg`,
   },
   {
     id: 6,
     name: '学不会',
     year: '2013',
     description: '情歌深度之作',
-    image: '/assets/albums/album-6.jpg',
+    image: `${basePath}/assets/albums/album-6.jpg`,
   },
   {
     id: 7,
     name: '新地球',
     year: '2014',
     description: '新专辑概念',
-    image: '/assets/albums/album-7.jpg',
+    image: `${basePath}/assets/albums/album-7.jpg`,
   },
   {
     id: 8,
     name: '学不会 Live',
     year: '2013',
     description: '现场演绎经典',
-    image: '/assets/albums/album-8.jpg',
+    image: `${basePath}/assets/albums/album-8.jpg`,
   },
 ];
 
