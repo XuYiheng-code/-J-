@@ -7,18 +7,12 @@ export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 客户端挂载后开始计时
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
-
-  // 服务端渲染时直接返回null
-  if (typeof window === 'undefined') {
-    return null;
-  }
 
   if (!isLoading) {
     return null;

@@ -4,17 +4,6 @@ import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function Cursor() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // 服务端渲染时直接返回null
-  if (!isMounted || typeof window === 'undefined') {
-    return null;
-  }
-
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
