@@ -5,20 +5,6 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.qq.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.y.qq.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.music.qq.com',
-      },
-    ],
   },
 };
 
